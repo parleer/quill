@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quill — dictation that works like a keyboard</title>
+<meta name="description" content="Hold a key, speak, and the words land wherever you're typing. On-device, no subscription, for macOS.">
+<link rel="icon" href="images/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <img class="appicon" src="images/icon.png" alt="">
+  <h1>Quill</h1>
+  <p class="tagline">Hold a key, speak, and the words land wherever you're typing.</p>
+  <p class="sub">On-device. No subscription. No account. Nothing leaves your Mac.</p>
+  <a class="download" id="download" href="#" data-fallback="https://github.com/parleer/quill/releases/latest">
+    Download for macOS
+  </a>
+  <p class="meta" id="meta">Requires macOS 26 or later · Apple silicon</p>
+</header>
+
+<section class="why">
+  <h2>Why not just use Apple Dictation?</h2>
+  <p class="lede">
+    Apple's engine is good. The way you have to use it isn't, and none of it is configurable.
+  </p>
+  <div class="grid">
+    <div>
+      <h3>Hold a key to talk</h3>
+      <p>Apple Dictation is toggle-only, and on a MacBook press-and-hold is already Siri's.
+         Quill lets you hold any modifier and speak — or double-tap it to stay hands-free.</p>
+    </div>
+    <div>
+      <h3>It doesn't stop when you click away</h3>
+      <p>Apple Dictation dies the moment you click into another window. Quill keeps going and
+         the words follow your cursor into whatever you clicked.</p>
+    </div>
+    <div>
+      <h3>No thirty-second timeout</h3>
+      <p>Apple cuts you off after thirty seconds of silence, sometimes dropping the last thing
+         you said. Quill stops when you stop.</p>
+    </div>
+    <div>
+      <h3>Words it has no business knowing</h3>
+      <p>Add names, jargon and product names and the recognizer is told about them, so it hears
+         them right the first time rather than being corrected afterwards.</p>
+    </div>
+  </div>
+</section>
+
+<section class="shots">
+  <figure>
+    <img src="images/hud.png" alt="Quill showing live transcription beside the text cursor">
+    <figcaption>
+      <strong>You see the words as you say them.</strong>
+      A small panel beside your cursor shows what's being heard, live. Text goes into your app
+      a phrase at a time once the recognizer is sure — or word by word if you prefer.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/pinned.png" alt="A window outlined in blue while another app is in front">
+    <figcaption>
+      <strong>Talk into a window you aren't looking at.</strong>
+      Point at any window and click to lock dictation to it. Browse, read, do anything — the
+      words still land there. The outline shows you where.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/settings.png" alt="Quill settings showing the speech engine options">
+    <figcaption>
+      <strong>Yours to set up.</strong>
+      Choose the key, the microphone, the engine, and the words it should know.
+    </figcaption>
+  </figure>
+</section>
+
+<section class="facts">
+  <h2>The short version</h2>
+  <ul>
+    <li><strong>Runs on your Mac.</strong> Apple's on-device speech models. No network, no
+        account, nothing uploaded — not your audio, not your text.</li>
+    <li><strong>Small.</strong> Around 2&nbsp;MB, native Swift, roughly 50&nbsp;MB of memory
+        sitting idle. Not a browser pretending to be an app.</li>
+    <li><strong>Spoken punctuation.</strong> Say "period", "comma", "new line" and get the
+        character, because it uses the same models macOS Dictation does.</li>
+    <li><strong>Works where you type.</strong> Native apps, Electron apps, browsers and
+        terminals, each by whichever method that app actually accepts.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Quill is made by <a href="https://flyinghippo.com">Flying Hippo</a>.</p>
+  <p class="fine">
+    Needs Accessibility and Input Monitoring permission to type for you and to notice your
+    key. It asks on first run and explains why.
+  </p>
+</footer>
+
+<script src="download.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+:root {
+  --ink: #16161a;
+  --muted: #5f6672;
+  --accent: #5a4fe6;
+  --rule: #e4e5ea;
+  --page: #ffffff;
+  --panel: #f7f7fa;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eceef2; --muted: #9aa1ae; --accent: #9a90ff;
+    --rule: #2a2c33; --page: #121317; --panel: #1a1c21;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; }
+a { color: var(--accent); }
+
+.hero { text-align: center; padding: 72px 24px 56px; }
+.appicon { width: 104px; height: 104px; border-radius: 23%; }
+h1 { font-size: 46px; margin: 18px 0 8px; }
+.tagline { font-size: 20px; margin: 0 auto 6px; max-width: 30ch; }
+.sub { color: var(--muted); margin: 0 auto 28px; max-width: 42ch; font-size: 15px; }
+
+.download {
+  display: inline-block; background: var(--accent); color: #fff;
+  padding: 13px 30px; border-radius: 10px; font-weight: 600;
+  text-decoration: none; font-size: 16px;
+}
+.download:hover { filter: brightness(1.08); }
+.meta { color: var(--muted); font-size: 13px; margin-top: 12px; }
+
+section { max-width: 860px; margin: 0 auto; padding: 48px 24px; }
+section + section { border-top: 1px solid var(--rule); }
+h2 { font-size: 26px; margin: 0 0 8px; }
+.lede { color: var(--muted); margin: 0 0 28px; max-width: 58ch; }
+
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 36px; }
+.grid h3 { font-size: 16px; margin: 0 0 6px; }
+.grid p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.shots figure { margin: 0 0 44px; }
+.shots img {
+  width: 100%; border-radius: 12px; border: 1px solid var(--rule);
+  background: var(--panel); display: block;
+}
+.shots figcaption { margin-top: 12px; color: var(--muted); font-size: 15px; }
+.shots figcaption strong { color: var(--ink); display: block; margin-bottom: 2px; }
+
+.facts ul { padding-left: 20px; margin: 0; }
+.facts li { margin-bottom: 12px; color: var(--muted); }
+.facts strong { color: var(--ink); }
+
+footer {
+  max-width: 860px; margin: 0 auto; padding: 36px 24px 64px;
+  border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px;
+}
+.fine { font-size: 13px; }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  h1 { font-size: 36px; }
+  .tagline { font-size: 18px; }
+}
